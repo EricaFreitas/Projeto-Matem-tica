@@ -1,77 +1,109 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #333;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
     margin: 0;
+    overflow: auto;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #ff7e5f;
 }
 
-.selector {
-    margin-bottom: 20px;
-}
-
-label, select, button {
-    margin-right: 10px;
-}
-
-#formContainer {
-    background-color: #fff;
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
+    margin: 20px;
+    display: inline-block;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+    vertical-align: top;
 }
 
-h2 {
-    color: #333;
+.card img {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 100px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.formula {
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.siglas {
-    margin-bottom: 20px;
-    font-size: 0.9em;
-    color: #555;
+label {
+    display: block;
+    margin: 5px 0;
 }
 
 input {
+    width: calc(100% - 22px);
+    padding: 10px;
     margin-bottom: 10px;
-    padding: 8px;
-    width: calc(100% - 16px);
-    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #333;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007BFF;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ff7e5f;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #feb47b;
 }
 
-#resultado {
-    margin-top: 20px;
-    font-weight: bold;
+p {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(100% - 40px);
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    input, button {
+        padding: 8px;
+    }
+
+    p {
+        font-size: 1em;
+    }
 }
